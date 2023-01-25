@@ -38,6 +38,8 @@ html {
     padding: 14px 30px;
     background: transparent;
     cursor: pointer;
+    font-family: 'Raleway';
+    font-size: 16px;
   }
 
   &__logo {
@@ -85,12 +87,15 @@ html {
 
 .section-form {
   background: no-repeat center url('/images/bg-3.jpg');
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .section-form__main {
   width: 1140px;
-  height: 701px;
-  margin: 0 auto;
+  margin: 100px auto;
   display: flex;
   justify-content: space-between;
   background: no-repeat left bottom url('/images/bg-2.png');
@@ -110,34 +115,35 @@ html {
 .section-form__description {
   display: flex;
   flex-direction: column;
-  /*justify-content: center;
-	align-items: center;*/
   height: 274px;
 }
 
-.section-form__inputs{
-  flex-grow: 1;
-  flex-shrink: 0;
+.section-form__inputs {
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.section-form__inputs > * {
-  margin-bottom:20px;
+.section-form__inputs >* {
+  margin-bottom: 20px;
 }
 
-.section-form__inputs > *:last-child {
+.section-form__inputs >*:last-child {
   margin-bottom: 0;
 }
 
-.section-form__input{
+.section-form__input {
   background: #FFF8E1;
   border: 0px;
   padding: 16px;
   width: 320px;
+  color: #8E825C;
 }
 
 .section-footer {
-	background-color: #372E11;
-	color: #FFFBED;
+  background-color: #372E11;
+  color: #FFFBED;
+  padding-bottom: 80px;
+  padding-top: 80px;
 }
 
 .btn-primary {
@@ -150,31 +156,57 @@ html {
   cursor: pointer;
 }
 
-.btn-primary__footer {
+.btn-footer {
+  text-align: center;
+}
+
+.btn-footer img {
+  margin-left: 10px;
+  display: inline;
+  vertical-align: middle;
+}
+
+.section-footer__columns {
   display: flex;
-  align-items: center;
-  cursor: pointer;
+  justify-content: space-between;
 }
 
-.section-footer__columns{
-	display: flex;
-	justify-content: space-between;
-}
-
-.section-footer__item{
-	display: flex;
-	flex-direction: column;
-}
-
-.section-footer__item-adress{
+.section-footer__item {
   display: flex;
+  flex-direction: column;
+  font-size: 20px;
 }
 
-.header__telephone{
+.section-footer__item>div {
+  margin-bottom: 16px;
+}
+
+.section-footer__item-title {
+  margin-bottom: 24px;
+  font-family: Marmelad;
+  font-size: 24px;
+}
+
+.section-footer__phone-number {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.section-footer__item-adresses {
+  display: flex;
+  gap: 40px;
+  line-height: 21px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.header__telephone {
   font-family: Roboto;
 }
 
-.header-join__title{
+.header-join__title {
   font-family: Marmelad;
   font-size: 56px;
   margin-bottom: 40px;
