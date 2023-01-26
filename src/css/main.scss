@@ -46,6 +46,19 @@ html {
     width: 98px;
     height: 86px;
   }
+
+  &
+}
+
+.header__menu-links a {
+  display: block;
+  text-decoration: none;
+  color: #372E11;
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .header-join__container {
@@ -215,4 +228,37 @@ html {
 .header__message {
   font-size: 26px;
   font-weight: 300
+}
+
+.header__menu-language {
+  color: #9B9B99;
+  flex: 0;
+
+  div {
+    margin-right: 8px;
+  }
+}
+
+@media (min-width: 768px){
+.header__menu-language {
+  display: none;
+}
+}
+
+@media (max-width: 768px){
+.header {
+  width: 100%;
+}
+
+.header-join__container {
+  width: 100%;
+}
+
+.header__menu-links {
+  display: none;
+}
+
+.header__menu-language {
+  display: visible;
+}
 }
