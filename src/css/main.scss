@@ -38,6 +38,7 @@ select {
 .header {
   min-height: 100vh;
   background: no-repeat center url('/images/bg-1.png');
+  position: relative;
 
   &__menu {
     display: flex;
@@ -48,10 +49,6 @@ select {
   &__menu__item {
     display: flex;
     align-items: center;
-
-    div {
-      margin-right: 40px;
-    }
   }
 
   &__btn {
@@ -71,6 +68,10 @@ select {
 
 }
 
+.header__content {
+  position: absolute;
+}
+
 .header__menu-links a {
   display: block;
   text-decoration: none;
@@ -82,13 +83,27 @@ select {
   }
 }
 
+.header__menu-button {
+  display: none;
+  border: 0;
+  background: transparent;
+}
+
+.header-join {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
 .header-join__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 617px;
+  width: 877px;
   margin: 0 auto;
 }
 
@@ -105,7 +120,7 @@ select {
   border-radius: 12px;
   padding: 14px 30px;
   font-size: 18px;
-  font-weight: 600px;
+  font-weight: 600;
   cursor: pointer;
 
   &-buy {
@@ -155,11 +170,11 @@ select {
   font-weight: 500;
 }
 
-.section-form__inputs__container > * {
+.section-form__inputs__container>* {
   margin-bottom: 20px;
 }
 
-.section-form__inputs__container > *:last-child {
+.section-form__inputs__container>*:last-child {
   margin-bottom: 0;
 }
 
@@ -249,6 +264,11 @@ select {
 
 .header__telephone {
   font-family: Roboto;
+  margin-right: 40px;
+}
+
+.header__login {
+  margin-right: 20px;
 }
 
 .header-join__title {
@@ -259,10 +279,12 @@ select {
 
 .header__message {
   font-size: 26px;
-  font-weight: 300
+  font-weight: 300;
+  margin-bottom: 40px;
 }
 
 .header__menu-language {
+  display: flex;
   color: #9B9B99;
   flex: 0;
 
@@ -285,15 +307,27 @@ select {
   }
 }
 
+@media screen and (max-width: 840px) {
+  .header__menu-links a {
+    margin-right: 20px;
+  }
+
+}
+
+@media (max-width: 1366px) {
+  .header__menu {
+    padding: 0 20px;
+  }
+}
 
 @media (max-width: 768px) {
   .header {
     width: 100%;
-    padding: 20px;
   }
 
   .header-join__container {
-    width: 100%;
+    height: auto;
+    margin: 80px;
   }
 
   .header__menu-links {
@@ -301,7 +335,8 @@ select {
   }
 
   .header__menu-language {
-    display: visible;
+    flex-grow: 1;
+    justify-content: flex-end;
   }
 
   .header__btn {
@@ -356,18 +391,47 @@ select {
     order: 3;
   }
 
-  .section-footer__item-adresses > div {
+  .section-footer__item-adresses>div {
     width: 100%;
   }
 
   .header__menu-button {
-    display: block;
     cursor: pointer;
+    display: block;
   }
 
 }
 
 @media (max-width:560px) {
+  .header {
+    background-size: cover;
+  }
+  .header__logo {
+    width: 48px;
+    height: 42px;
+  }
+
+  .header__telephone {
+    margin-right: 0;
+    padding: 8px;
+  }
+
+  .header-join__title {
+    font-size: 24px;
+  }
+
+  .header__message, .header-join__btn {
+    font-size: 16px;
+  }
+
+  .header__login {
+    display: none;
+  }
+
+  .header__menu__item {
+    flex-grow: 1;
+  }
+
   .section-form {
     background-size: cover;
   }
@@ -392,5 +456,8 @@ select {
   .section-footer__columns {
     margin: 24px;
   }
-
+  .btn-footer {
+    width: 172px;
+    font-size: 16px;
+  }
 }
