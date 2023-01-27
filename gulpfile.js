@@ -14,17 +14,17 @@ function buildStyles() {
     .pipe(prefix({
 			cascade: false
 		}))
-    .pipe(gulp.dest('./dest/css'));
+    .pipe(gulp.dest('./dist/css'));
 };
 
 function copyImages() {
   return gulp.src('./src/images/**/*')
-    .pipe(gulpCopy('./dest/images', {prefix: 2}))
+    .pipe(gulpCopy('./dist/images', {prefix: 2}))
 }
 
 function copyHtml() {
   return gulp.src('./src/index.html')
-    .pipe(gulpCopy('./dest', {prefix: 1}))
+    .pipe(gulpCopy('./dist', {prefix: 1}))
 }
 
 exports.buildStyles = buildStyles;
@@ -55,7 +55,7 @@ exports.build = async function() {
 exports.webserver = function() {
   exports.build()
   watch()
-  gulp.src('dest')
+  gulp.src('dist')
     .pipe(webserver({
       livereload: true,
       directoryListing: false,
